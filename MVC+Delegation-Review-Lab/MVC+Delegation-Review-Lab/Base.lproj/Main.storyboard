@@ -43,9 +43,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="EcD-38-MUw" kind="show" id="JNG-hA-yqD"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -59,7 +56,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="94S-A7-fQt"/>
+                    <navigationItem key="navigationItem" title="Movies" id="94S-A7-fQt">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="85h-uV-k2c">
+                            <connections>
+                                <segue destination="EcD-38-MUw" kind="show" id="Fn2-52-LFE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,14 +75,38 @@
                     <view key="view" contentMode="scaleToFill" id="Laq-WG-PiH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-JA-2F4">
+                                <rect key="frame" x="18" y="325" width="378" height="31"/>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FiT-vw-hGt">
+                                <rect key="frame" x="160" y="432" width="94" height="32"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Table View Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6J-ZU-FFV">
+                                <rect key="frame" x="20" y="140" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FiT-vw-hGt" firstAttribute="centerY" secondItem="Laq-WG-PiH" secondAttribute="centerY" id="BK5-AQ-yMt"/>
+                            <constraint firstItem="n4M-JA-2F4" firstAttribute="leading" secondItem="tES-TW-xFO" secondAttribute="leading" constant="20" id="C8c-pw-bVX"/>
+                            <constraint firstItem="FiT-vw-hGt" firstAttribute="top" secondItem="n4M-JA-2F4" secondAttribute="bottom" constant="77" id="Lef-jM-ZX7"/>
+                            <constraint firstItem="FiT-vw-hGt" firstAttribute="centerX" secondItem="Laq-WG-PiH" secondAttribute="centerX" id="RZT-Hs-kU0"/>
+                            <constraint firstItem="tES-TW-xFO" firstAttribute="trailing" secondItem="n4M-JA-2F4" secondAttribute="trailing" constant="20" id="ZMl-Ak-2w1"/>
+                            <constraint firstItem="d6J-ZU-FFV" firstAttribute="leading" secondItem="tES-TW-xFO" secondAttribute="leading" constant="20" id="ZVg-nb-iOG"/>
+                            <constraint firstItem="d6J-ZU-FFV" firstAttribute="top" secondItem="tES-TW-xFO" secondAttribute="top" id="gKb-3C-No3"/>
+                            <constraint firstItem="tES-TW-xFO" firstAttribute="trailing" secondItem="d6J-ZU-FFV" secondAttribute="trailing" constant="20" id="lUs-gZ-bo1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tES-TW-xFO"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZVg-tJ-FZI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I31-cl-8zR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="117"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gTv-qf-Bgf">
